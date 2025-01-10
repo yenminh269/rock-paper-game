@@ -1,0 +1,15 @@
+/* * {
+    
+    border: red solid;
+}*/
+#score {
+    
+    margin-bottom: 20px;
+    text-align: center;
+}
+#button {
+    display: flex;
+    justify-content: center;
+   
+    
+}

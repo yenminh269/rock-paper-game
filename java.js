@@ -4,8 +4,6 @@ function getComputerChoice(){
 
 function playGame(humanSelection){
     let computerSelection = getComputerChoice();
-
-    myLoop: 
     if(humanScore != 5 || computerScore != 5){
         if((humanSelection == 1 && computerSelection == 3)||(humanSelection == 2 && computerSelection ==1) ||(humanSelection == 3 && computerSelection ==2)){
             message.textContent = "You win";
@@ -22,7 +20,7 @@ function playGame(humanSelection){
         else{
             message.textContent = "It's a tied";
         }
-        break myLoop;
+        
     }
     if(humanScore == 5){
         message.textContent = `You are the winner. Total score: ${humanScore} points`;

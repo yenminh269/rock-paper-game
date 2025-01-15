@@ -1,7 +1,15 @@
-/* * {
+ * {
     
     border: red solid;
-}*/
+}
+html {
+    margin:100px;
+    background-color: bisque;
+}
+body {
+    
+    padding: 100px;
+}
 #score {
     
     margin-bottom: 20px;
@@ -9,7 +17,15 @@
 }
 #button {
     display: flex;
-    justify-content: center;
-   
+    justify-content: space-evenly;
+    padding: 50px;
+}
+#rock, #paper, #scissors {
+    font-family: 'Times New Roman', Times, serif;
     
+    font-weight:900;
+    color:brown;
+    background-color:coral;
+    width: 70px;
+    height: 70px;
 }

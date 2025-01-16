@@ -3,40 +3,43 @@ function getComputerChoice(){
 } 
 
 function playGame(humanSelection){
+    if(humanScore==5 || computerScore==5){
+        return;
+    }
     let computerSelection = getComputerChoice();
-    if(humanScore != 5 || computerScore != 5){
+    if(humanScore < 5 || computerScore < 5){
         if((humanSelection == 1 && computerSelection == 3)||(humanSelection == 2 && computerSelection ==1) ||(humanSelection == 3 && computerSelection ==2)){
             message.textContent = "You win";
             humanScore +=1;
-            player_Score.textContent = "Player Score: " + humanScore + "points";
+            player_Score.textContent =  humanScore + " points";
 
         }
         else if((humanSelection == 1 && computerSelection == 2)||(humanSelection == 2 && computerSelection ==3)||(humanSelection == 3 && computerSelection ==1)){
             message.textContent = "You lose";
             computerScore +=1;
-            computer_Score.textContent = "Computer Score: " + computerScore + "points";
+            computer_Score.textContent =  computerScore + " points";
 
         }
         else{
             message.textContent = "It's a tied";
         }
-        
-    }
+            
+        }
     if(humanScore == 5){
-        message.textContent = `You are the winner. Total score: ${humanScore} points`;
+        message.textContent = `You are the winner.`;
         }
     else if(computerScore == 5){
-        message.textContent = `The computer is the winner. Total score: ${computerScore} points`;
+        message.textContent = `The computer is the winner.`;
         }
     else {
         return;
-    }
+        }
 }
 
 let humanScore = 0;
 let computerScore = 0;
-let player_Score = document.querySelector("#player");
-let computer_Score = document.querySelector("#computer");
+let player_Score = document.querySelector("#player-score");
+let computer_Score = document.querySelector("#computer-score");
 let rock = document.querySelector("#rock");
 let paper = document.querySelector("#paper");
 let scissors = document.querySelector("#scissors");

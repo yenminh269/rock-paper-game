@@ -1,31 +1,49 @@
- * {
-    
-    border: red solid;
-}
-html {
-    margin:100px;
+body {
+    text-align: center;
+    margin:0px;
+    padding: 0px;
     background-color: bisque;
 }
-body {
-    
-    padding: 100px;
-}
-#score {
-    
-    margin-bottom: 20px;
-    text-align: center;
-}
+
 #button {
     display: flex;
     justify-content: space-evenly;
     padding: 50px;
+    cursor: pointer;
 }
 #rock, #paper, #scissors {
     font-family: 'Times New Roman', Times, serif;
-    
-    font-weight:900;
-    color:brown;
     background-color:coral;
-    width: 70px;
+    width: 80px;
+    height: 80px;
+    border: solid;
+    border-radius: 2cm;
+    font-size:medium;
+}
+#rock:hover, #paper:hover, #scissors:hover {
+    color:orangered;
+}
+#computer-score, #player-score, .player, .computer{
+    display: flex;
+    width: 80px;
     height: 70px;
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    
+}
+#player, #computer {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+#message-title, #computer-score, #player-score, .player, .computer,
+#rock, #paper, #scissors, #message  {
+    font-weight:700;
+    color: brown;
+    
+}
+#message {
+    margin-top: 20px;
+    font-size: larger;
 }
